@@ -4,6 +4,15 @@ exports.test = function(req, res) {
   res.send('Greetings from the Test controller!');
 }
 
+exports.get_all = async (req, res) => {
+  try {
+    const products = await Product.find({});
+    res.json(products);
+  } catch (error) {
+    res.json(error);
+  }
+}
+
 exports.product_create = function(req, res) {
   let product = new Product(
     {

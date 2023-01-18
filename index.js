@@ -7,7 +7,8 @@ const mongoose = require('mongoose');
 
 const product = require('./routes/product.route');
 
-let dev_db_url = 'mongodb+srv://MattJ:nyP6MXk01FFkTR2Y@cluster0.wqfecr1.mongodb.net/crudApp?retryWrites=true&w=majority'
+//let dev_db_url = 'mongodb+srv://fullstack:capstoneprep@cluster0.wqfecr1.mongodb.net/crudApp?retryWrites=true&w=majority'
+let dev_db_url = 'mongodb+srv://fullstack:capstoneprep@cluster0.vrivmag.mongodb.net/crudApp?retryWrites=true&w=majority'
 
 let mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB);
